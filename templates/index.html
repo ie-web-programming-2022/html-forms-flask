@@ -1,0 +1,11 @@
+{% extends "base.html" %} 
+
+{% block title %}Login | paymepal{% endblock %}
+
+{% block main %}
+<form action="http://127.0.0.1:5000/login" method="POST">
+  <input type="text" name="username" placeholder="Username" required="" />
+  <input type="password" name="password" placeholder="Password" required="" />
+  <input class="submit" type="submit" value="login" />
+</form>
+{% endblock %}
