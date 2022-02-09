@@ -6,6 +6,8 @@ Created on Fri Jan 29 08:57:32 2021
 @author: pepe
 """
 
+#%%
+
 from flask import Flask, render_template, jsonify, request
 
 app = Flask("example")
@@ -22,3 +24,4 @@ def handle_form_submission():
     return jsonify(request.form)
 
 app.run(debug=True)
+# %%
