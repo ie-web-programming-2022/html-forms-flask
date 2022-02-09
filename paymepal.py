@@ -13,7 +13,13 @@ def login():
     password = request.form["password"]
 
     if username in users and users[username] == password:
-        return render_template("private.html", user=username)
+        user_transactions = transactions[username]
+        
+        return render_template(
+            "private.html",
+            user=username,
+            transactions=user_transactions
+        )
     else:
         return render_template("unauthorized.html"), 403
 

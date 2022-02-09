@@ -3,7 +3,13 @@
 {% block title %}Private | paymepal{% endblock %}
 
 {% block main %}
-<h1>Private area</h1>
+<em>Hello {{user}}</em>
 
-<em>congrats {{user}}, you're in!</em>
+<h2>transactions</h2>
+<ul class="transactions">
+{% for transaction in transactions %}
+    <li>{{transaction.merchant}} <strong>{{transaction.amount}} {{transaction.currency}}</strong></li>
+{% endfor %}
+</ul>
+
 {% endblock %}
